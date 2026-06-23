@@ -18,34 +18,65 @@
         body {
             background-color: #F7F4EF;
             min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             font-family: system-ui, -apple-system, sans-serif;
+            color: #1a1a1a;
+            line-height: 1.6;
         }
 
-        .poster {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            padding: 4rem 2rem;
+        .page {
             max-width: 700px;
-            width: 100%;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .logo {
+            font-size: 4rem;
+            line-height: 1;
         }
 
         .title-main {
             font-family: 'Playfair Display', serif;
             font-size: clamp(3rem, 10vw, 5.5rem);
             font-weight: 700;
-            color: #1a1a1a;
             line-height: 1;
             letter-spacing: 0.02em;
+            margin-top: 0.5rem;
         }
 
+        /* Sections */
+        section {
+            margin-bottom: 3rem;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
+        }
+
+        .facts li {
+            list-style: none;
+            margin-bottom: 0.5rem;
+        }
+
+        .facts strong {
+            display: inline-block;
+            width: 120px;
+        }
+
+        .description {
+            margin-top: 1.5rem;
+        }
+
+        /* Video */
         .video-wrapper {
             width: 100%;
-            max-width: 560px;
         }
 
         iframe {
@@ -56,22 +87,72 @@
             border: none;
         }
 
+        /* Links */
+        .links ul {
+            list-style: none;
+        }
+
+        .links li {
+            margin-bottom: 0.5rem;
+        }
+
+        .links a {
+            color: #8a5a2b;
+            text-decoration: none;
+        }
+
+        .links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid #d8d2c8;
+            padding-top: 1.5rem;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #6b6b6b;
+        }
     </style>
 </head>
 
 <body>
-    <div class="poster">
-        <p class="title-eyebrow">******************************************************************</p>
-        <h1 class="title-main">Operation Bäver</h1>
-        <div class="rule"></div>
-        <p class="title-eyebrow">******************************************************************</p>
-        <div class="video-wrapper">
-            <iframe src="https://www.youtube.com/embed/Ohgh7Prwrws?si=TFP2kbf16ULy-Vrg"
-                title="YouTube video player"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen></iframe>
-        </div>
+    <div class="page">
+        <header>
+            <img src="img.png" alt="" width="250" height="300"> 
+        </header>
+
+        <section class="info">
+            <h2>About the movie</h2>
+            <ul class="facts">
+                <li><strong>Regissör:</strong> Daniel Chong</li>
+                </ul>
+            <p class="description">
+                I det här animerade komediäventyret tar djurvännen Mabel chansen att använda en ny teknologi för att låta sitt medvetande ”hoppa” in i en naturtrogen robotbäver och kommunicera direkt med djur. När hon gör fantastiska upptäckter blir Mabel vän med en karismatisk bäver och måste samla hela djurriket för att möta ett stort och överhängande hot från människorna..
+            </p>
+        </section>
+
+        <section class="trailer">
+            <h2>Trailer</h2>
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/Ohgh7Prwrws?si=TFP2kbf16ULy-Vrg"
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <section class="links">
+            <h2>Links</h2>
+            <ul>
+                <li><a href="https://www.imdb.com" target="_blank" rel="noopener">IMDb page</a></li>
+            </ul>
+        </section>
+
+        <footer>
+        </footer>
     </div>
 </body>
+
 </html>
